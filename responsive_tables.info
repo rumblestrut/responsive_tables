@@ -1,0 +1,4 @@
+name = "Responsive Tables"
+package = "Mahaffie"
+description = "Makes tables responsive for better viewing on mobile devices."
+core = 7.x

@@ -1,0 +1,24 @@
+<?php
+/**
+ * Uses http://zurb.com/playground/responsive-tables from Zurb to make tables responsive
+ */
+
+function responsive_tables_help($path, $arg) {
+  $output = ''; // declare the output variable
+  switch ($path) {
+    case "admin/help#responsive_tables":
+      $output = '<p>' . t("Makes tables responsive for better viewing on mobile devices.") . '</p>';
+      break;
+  }
+  return $output;
+} // function responsive_tables_help
+
+
+  /*
+  * Add the CSS and JavaScript to the page
+  */
+function responsive_tables_init() {
+  global $node;
+  drupal_add_css(drupal_get_path('module', 'responsive_tables') .'/responsive_tables.css');
+  drupal_add_js(drupal_get_path('module', 'responsive_tables') .'/responsive_tables.js');
+}
